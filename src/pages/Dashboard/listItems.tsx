@@ -17,6 +17,7 @@ import { Link } from "react-router-dom";
 export const ListItems = (props: any): JSX.Element => {
   return (
     <React.Fragment>
+      <Link style={{textDecoration : "none", color : "black"}} to={"/notes"}>
       <ListItemButton>
         <ListItemIcon>
           <img
@@ -27,6 +28,8 @@ export const ListItems = (props: any): JSX.Element => {
         </ListItemIcon>
         <ListItemText primary="Notes" />
       </ListItemButton>
+      </Link>
+      <Link style={{textDecoration : "none", color : "black"}} to={"/dashboard"}>
       <ListItemButton selected>
         <ListItemIcon>
           <img
@@ -37,6 +40,8 @@ export const ListItems = (props: any): JSX.Element => {
         </ListItemIcon>
         <ListItemText primary="Timetable" />
       </ListItemButton>
+      </Link>
+      <Link style={{textDecoration : "none", color : "black"}} to={"/excersises"}>
       <ListItemButton>
         <ListItemIcon>
           <img
@@ -47,6 +52,8 @@ export const ListItems = (props: any): JSX.Element => {
         </ListItemIcon>
         <ListItemText primary="Exercises" />
       </ListItemButton>
+      </Link>
+      <Link style={{textDecoration : "none", color : "black"}} to={"/dishes"}>
       <ListItemButton>
         <ListItemIcon>
           <img
@@ -57,6 +64,8 @@ export const ListItems = (props: any): JSX.Element => {
         </ListItemIcon>
         <ListItemText primary="Dishes" />
       </ListItemButton>
+      </Link>
+      <Link style={{textDecoration : "none", color : "black"}} to={"/prgrams"}>
       <ListItemButton>
         <ListItemIcon>
           <img
@@ -67,6 +76,7 @@ export const ListItems = (props: any): JSX.Element => {
         </ListItemIcon>
         <ListItemText primary="Programs" />
       </ListItemButton>
+      </Link>
     </React.Fragment>
   );
 };
@@ -74,6 +84,7 @@ export const ListItems = (props: any): JSX.Element => {
 export const SecondaryListItems = (props: any): JSX.Element => {
   return (
     <React.Fragment>
+      <Link style={{textDecoration : "none", color : "black"}} to={"/stats"}>
       <ListItemButton>
         <ListItemIcon>
           <img
@@ -83,6 +94,8 @@ export const SecondaryListItems = (props: any): JSX.Element => {
         </ListItemIcon>
         <ListItemText primary="Stats" />
       </ListItemButton>
+      </Link>
+      <Link style={{textDecoration : "none", color : "black"}} to={"/friends"}>
       <ListItemButton>
         <ListItemIcon>
           <img
@@ -92,6 +105,8 @@ export const SecondaryListItems = (props: any): JSX.Element => {
         </ListItemIcon>
         <ListItemText primary="Friends" />
       </ListItemButton>
+      </Link>
+      <Link style={{textDecoration : "none", color : "black"}} to={"/notifications"}>
       <ListItemButton>
         <ListItemIcon>
           <img
@@ -101,6 +116,7 @@ export const SecondaryListItems = (props: any): JSX.Element => {
         </ListItemIcon>
         <ListItemText primary="Notificatons" />
       </ListItemButton>
+      </Link>
     </React.Fragment>
   );
 };
@@ -108,6 +124,7 @@ export const SecondaryListItems = (props: any): JSX.Element => {
 export const BottomListItems = (props: any): JSX.Element => {
   return (
     <React.Fragment>
+      <Link style={{textDecoration : "none", color : "black"}} to={"/settings"}>
       <ListItemButton>
         <ListItemIcon>
           <img
@@ -118,6 +135,7 @@ export const BottomListItems = (props: any): JSX.Element => {
         </ListItemIcon>
         <ListItemText primary="Settings" />
       </ListItemButton>
+      </Link>
       <Link style={{textDecoration : "none", color : "red"}} to={"/"}>
         <ListItemButton>
           <ListItemIcon>
