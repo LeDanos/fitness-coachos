@@ -4,8 +4,14 @@ export function Excersises() {
   return (
     <>
         <h1>Excersises</h1>
-        <p><Link to={"/dashboard"}>dashboard</Link></p>
-        <p><Link to={"/"}>mainpage</Link></p>
+        <ul>
+          <li>
+            <p>Name</p>
+            <p><Link to={"/excersise"}>View</Link></p>
+          </li>
+        </ul>
+        <p><Link to={"/"}>dashboard</Link></p>
+        <p><Link to={"/main"}>mainpage</Link></p>
     </>
   );
 }

@@ -12,13 +12,17 @@ import { Stats } from "../Stats/Stats";
 import { Friends } from "../Friends/Friends";
 import { Notifications } from "../Notifications/Notifications";
 import { Settings } from "../AppSettings/AppSettings";
+import { Friend } from "../Friend/Friend";
+import { Program } from "../Programs/Program";
+import { Dish } from "../Dishes/Dish";
+import { Excersise } from "../Excersises/Excersise";
 
 export function AppRoutes() {
     return (
         <HashRouter>
             <Routes>
-                <Route path="/" element={<MainPage />} />
-                <Route path="/dashboard" element={<Dashboard />}/>
+                <Route path="/" element={<Dashboard />} />
+                <Route path="/main" element={<MainPage />}/>
                 <Route path="/signin" element={<SignIn />}/>
                 <Route path="/signup" element={<SignUp />}/>
                 <Route path="/notes" element={<Notes />}/>
@@ -29,6 +33,10 @@ export function AppRoutes() {
                 <Route path="/friends" element={<Friends />}/>
                 <Route path="/notifications" element={<Notifications />}/>
                 <Route path="/settings" element={<Settings />}/>
+                <Route path="/friend" element={<Friend />}/>
+                <Route path="/program" element={<Program />}/>
+                <Route path="/dish" element={<Dish />}/>
+                <Route path="/excersise" element={<Excersise />}/>
                 <Route path="*" element={<NotFound />} />
             </Routes>
         </HashRouter>

@@ -92,7 +92,7 @@ export const SecondaryListItems = (props: any): JSX.Element => {
             alt=""
           />
         </ListItemIcon>
-        <ListItemText primary="Stats" />
+        <ListItemText primary="Achievements" />
       </ListItemButton>
       </Link>
       <Link style={{textDecoration : "none", color : "black"}} to={"/friends"}>
@@ -136,7 +136,7 @@ export const BottomListItems = (props: any): JSX.Element => {
         <ListItemText primary="Settings" />
       </ListItemButton>
       </Link>
-      <Link style={{textDecoration : "none", color : "red"}} to={"/"}>
+      <Link style={{textDecoration : "none", color : "red"}} to={"/main"}>
         <ListItemButton>
           <ListItemIcon>
             <img

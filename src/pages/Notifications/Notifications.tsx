@@ -4,8 +4,13 @@ export function Notifications() {
   return (
     <>
         <h1>Notifications</h1>
-        <p><Link to={"/dashboard"}>dashboard</Link></p>
-        <p><Link to={"/"}>mainpage</Link></p>
+        <ul>
+          <li>New alert: Red</li>
+          <li>New alert: Spy</li>
+          <li>New alert: Base</li>
+        </ul>
+        <p><Link to={"/"}>dashboard</Link></p>
+        <p><Link to={"/main"}>mainpage</Link></p>
     </>
   );
 }

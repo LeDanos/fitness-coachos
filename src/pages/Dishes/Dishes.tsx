@@ -4,8 +4,16 @@ export function Dishes() {
   return (
     <>
         <h1>Dishes</h1>
-        <p><Link to={"/dashboard"}>dashboard</Link></p>
-        <p><Link to={"/"}>mainpage</Link></p>
+        <p>Filter</p>
+        <ul>
+          <li>
+            <p>Dish image</p>
+            <p>name</p>
+            <p><Link to={"/dish"}>View</Link></p>
+          </li>
+        </ul>
+        <p><Link to={"/"}>dashboard</Link></p>
+        <p><Link to={"/main"}>mainpage</Link></p>
     </>
   );
 }
