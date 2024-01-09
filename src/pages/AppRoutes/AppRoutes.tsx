@@ -11,11 +11,15 @@ import { Programs } from "../Programs/Programs";
 import { Stats } from "../Stats/Stats";
 import { Friends } from "../Friends/Friends";
 import { Notifications } from "../Notifications/Notifications";
-import { Settings } from "../AppSettings/AppSettings";
+import { Settings } from "../Settings/Settings";
 import { Friend } from "../Friend/Friend";
 import { Program } from "../Programs/Program";
 import { Dish } from "../Dishes/Dish";
 import { Excersise } from "../Excersises/Excersise";
+import { Timetable } from "../Timetable/Timetable";
+import { Profile } from "../Profile/Profile";
+import { Policy } from "../Policy/Policy";
+import { AppReview } from "../AppReview/AppReview";
 
 export function AppRoutes() {
     return (
@@ -37,6 +41,10 @@ export function AppRoutes() {
                 <Route path="/program" element={<Program />}/>
                 <Route path="/dish" element={<Dish />}/>
                 <Route path="/excersise" element={<Excersise />}/>
+                <Route path="/timetable" element={<Timetable />}/>
+                <Route path="/profile" element={<Profile />}/>
+                <Route path="/policy" element={<Policy />}/>
+                <Route path="/appreview" element={<AppReview />}/>
                 <Route path="*" element={<NotFound />} />
             </Routes>
         </HashRouter>

@@ -24,6 +24,7 @@ import "../../index.css";
 import LOGO from "../../assets/LOGO.svg";
 import { ThemeOptions } from "@mui/material/styles";
 import { Avatar } from "@mui/material";
+import { Link as Links} from "react-router-dom";
 
 function Copyright(props: any) {
   return (
@@ -198,6 +199,7 @@ export default function Dashboard() {
             <Typography variant="h5" color={"#9471F6"}>
               Honzik Pikacu
             </Typography>
+            <Links to={"/profile"}>
             <IconButton color="inherit">
               <Avatar
                 alt="Avatar"
@@ -205,6 +207,7 @@ export default function Dashboard() {
                 sx={{ width: 56, height: 56 }}
               />
             </IconButton>
+            </Links>
           </Toolbar>
         </AppBar>
         <Drawer variant="permanent" open={open}>

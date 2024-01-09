@@ -1,11 +1,10 @@
 import { Link } from "react-router-dom";
 
-export function Notes() {
+export function Timetable() {
   return (
     <>
-        <h1>Notes</h1>
-        <p>import Notion from "notion";</p>
-        <p>Notion</p>
+        <h1>Timetable</h1>
+        <p>Rozvrh</p>
         <p><Link to={"/"}>dashboard</Link></p>
         <p><Link to={"/main"}>mainpage</Link></p>
     </>
