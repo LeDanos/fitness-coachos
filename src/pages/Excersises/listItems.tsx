@@ -30,7 +30,7 @@ export const ListItems = (props: any): JSX.Element => {
       </ListItemButton>
       </Link>
       <Link style={{textDecoration : "none", color : "black"}} to={"/timetable"}>
-      <ListItemButton selected>
+      <ListItemButton>
         <ListItemIcon>
           <img
             src={calendar}
@@ -42,7 +42,7 @@ export const ListItems = (props: any): JSX.Element => {
       </ListItemButton>
       </Link>
       <Link style={{textDecoration : "none", color : "black"}} to={"/excersises"}>
-      <ListItemButton>
+      <ListItemButton selected>
         <ListItemIcon>
           <img
             src={run}

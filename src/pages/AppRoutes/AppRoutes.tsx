@@ -5,7 +5,6 @@ import SignIn from "../SignIn/SignIn";
 import SignUp from "../SignUp/SignUp";
 import NotFound from "../NotFound/NotFound";
 import { Notes } from "../Notes/Notes";
-import { Excersises } from "../Excersises/Excersises";
 import { Dishes } from "../Dishes/Dishes";
 import { Programs } from "../Programs/Programs";
 import { Stats } from "../Stats/Stats";
@@ -15,11 +14,12 @@ import { Settings } from "../Settings/Settings";
 import { Friend } from "../Friend/Friend";
 import { Program } from "../Programs/Program";
 import { Dish } from "../Dishes/Dish";
-import { Excersise } from "../Excersises/Excersise";
 import { Timetable } from "../Timetable/Timetable";
 import { Profile } from "../Profile/Profile";
 import { Policy } from "../Policy/Policy";
 import { AppReview } from "../AppReview/AppReview";
+import Excersises from "../Excersises/Excersises";
+import Excersise from "../Excersises/Excersise";
 
 export function AppRoutes() {
     return (

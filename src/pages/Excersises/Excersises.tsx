@@ -21,6 +21,54 @@ import LOGO from "../../assets/LOGO.svg";
 import { ThemeOptions } from "@mui/material/styles";
 import { Avatar } from "@mui/material";
 import { Link as Links} from "react-router-dom"
+const drawerWidth = "12rem";
+
+interface AppBarProps extends MuiAppBarProps {
+  open?: boolean;
+}
+
+const AppBar = styled(MuiAppBar, {
+  shouldForwardProp: (prop) => prop !== "open",
+})<AppBarProps>(({ theme, open }) => ({
+  zIndex: theme.zIndex.drawer + 1,
+  transition: theme.transitions.create(["width", "margin"], {
+    easing: theme.transitions.easing.sharp,
+    duration: theme.transitions.duration.leavingScreen,
+  }),
+  ...(open && {
+    transition: theme.transitions.create(["width", "margin"], {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.enteringScreen,
+    }),
+  }),
+}));
+
+const Drawer = styled(MuiDrawer, {
+  shouldForwardProp: (prop) => prop !== "open",
+})(({ theme, open }) => ({
+  "& .MuiDrawer-paper": {
+    position: "relative",
+    whiteSpace: "nowrap",
+    backgroundColor : "#F2F2F2",
+    width: drawerWidth,
+    transition: theme.transitions.create("width", {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.enteringScreen,
+    }),
+    boxSizing: "border-box",
+    ...(!open && {
+      overflowX: "hidden",
+      transition: theme.transitions.create("width", {
+        easing: theme.transitions.easing.sharp,
+        duration: theme.transitions.duration.leavingScreen,
+      }),
+      width: theme.spacing(7),
+      [theme.breakpoints.up("sm")]: {
+        width: theme.spacing(8),
+      },
+    }),
+  },
+}));
 
 export const themeOptions: ThemeOptions = {
   palette: {
@@ -94,22 +142,6 @@ export const themeOptions: ThemeOptions = {
 const defaultTheme = createTheme(themeOptions);
 
 export default function Excersises() {
-  /*
-  return (
-    <>
-        <h1>Excersises</h1>
-        <p>This shit mine</p>
-        <ul>
-          <li>
-            <p>Name</p>
-            <p><Links to={"/excersise"}>View</Links></p>
-          </li>
-        </ul>
-        <p><Links to={"/"}>dashboard</Links></p>
-        <p><Links to={"/main"}>mainpage</Links></p>
-    </>
-  );
-  */
   const [open, setOpen] = React.useState(false);
   const toggleDrawer = () => {
     setOpen(!open);
@@ -196,37 +228,109 @@ export default function Excersises() {
         >
           <Toolbar />
           <Container maxWidth={false} sx={{ mt: 4, mb: 4 }}>
-            <Grid container spacing={3}>
-              <Grid item xs={12} md={8} lg={9}>
+            <Grid container spacing={6}>
+              <Grid item xs={12} md={8} lg={2}>
+              <Links to={"/excersise"}>
                 <Paper
                   sx={{
                     p: 2,
                     display: "flex",
                     flexDirection: "column",
-                    height: 240,
+                    height: 400,
+                    textAlign:"center",
                   }}
                 >
+                  <img src="/pika.png" width={250} height={200}/>
+                  <h1>Excersise of Chinese 你好，我也很高兴认识你，你呢?</h1>
                 </Paper>
+              </Links>
               </Grid>
-              <Grid item xs={12} md={4} lg={3}>
+              <Grid item xs={12} md={8} lg={2}>
+              <Links to={"/excersise"}>
                 <Paper
                   sx={{
                     p: 2,
                     display: "flex",
                     flexDirection: "column",
-                    height: 240,
+                    height: 400,
+                    textAlign:"center",
+                    textDecoration:"none",
                   }}
                 >
-                  <Deposits />
+                  <img src="/pika.png" width={250} height={200}/>
+                  <h1>Excersise of the long and painful Saska pegging session</h1>
                 </Paper>
+              </Links>
               </Grid>
-              <Grid item xs={12}>
-                <Paper sx={{ p: 2, display: "flex", flexDirection: "column" }}>
-                  <Orders />
+              <Grid item xs={12} md={8} lg={2}>
+              <Links to={"/excersise"}>
+                <Paper
+                  sx={{
+                    p: 2,
+                    display: "flex",
+                    flexDirection: "column",
+                    height: 400,
+                    textAlign:"center",
+                    textDecoration:"none"
+                  }}
+                >
+                  <img src="/pika.png" width={250} height={200}/>
+                  <h1>Excersise until death!!! 😱😱😱😱</h1>
                 </Paper>
+              </Links>
+              </Grid>
+              <Grid item xs={12} md={8} lg={2}>
+              <Links to={"/excersise"}>
+                <Paper
+                  sx={{
+                    p: 2,
+                    display: "flex",
+                    flexDirection: "column",
+                    height: 400,
+                    textAlign:"center",
+                    textDecoration:"none"
+                  }}
+                >
+                  <img src="/pika.png" width={250} height={200}/>
+                  <h1>Excersise 4</h1>
+                </Paper>
+              </Links>
+              </Grid>
+              <Grid item xs={12} md={8} lg={2}>
+              <Links to={"/excersise"}>
+                <Paper
+                  sx={{
+                    p: 2,
+                    display: "flex",
+                    flexDirection: "column",
+                    height: 400,
+                    textAlign:"center",
+                    textDecoration:"none"
+                  }}
+                >
+                  <img src="/pika.png" width={250} height={200}/>
+                  <h1>Excersise 5</h1>
+                </Paper>
+              </Links>
+              </Grid>
+              <Grid item xs={12} md={8} lg={2}>
+              <Links to={"/excersise"}>
+                <Paper
+                  sx={{
+                    p: 2,
+                    display: "flex",
+                    flexDirection: "column",
+                    height: 400,
+                    textAlign:"center",
+                    textDecoration:"none"
+                  }}
+                >
+                  <img src="/pika.png" width={250} height={200}/>
+                  <h1>Excersise 6</h1>
+                </Paper>
+              </Links>
               </Grid>
             </Grid>
-            <Copyright sx={{ pt: 4 }} />
           </Container>
         </Box>
       </Box>
