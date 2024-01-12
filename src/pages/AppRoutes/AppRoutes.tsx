@@ -11,7 +11,7 @@ import { Stats } from "../Stats/Stats";
 import { Friends } from "../Friends/Friends";
 import { Notifications } from "../Notifications/Notifications";
 import { Settings } from "../Settings/Settings";
-import { Friend } from "../Friend/Friend";
+import { Friend } from "../Friends/Friend";
 import { Program } from "../Programs/Program";
 import { Dish } from "../Dishes/Dish";
 import { Timetable } from "../Timetable/Timetable";

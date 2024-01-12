@@ -21,6 +21,8 @@ import LOGO from "../../assets/LOGO.svg";
 import { ThemeOptions } from "@mui/material/styles";
 import { Avatar } from "@mui/material";
 import { Link as Links} from "react-router-dom"
+import ReturnIcon from '@mui/icons-material/KeyboardReturn';
+import { Source } from "@mui/icons-material";
 const drawerWidth = "12rem";
 
 interface AppBarProps extends MuiAppBarProps {
@@ -235,16 +237,18 @@ export default function Excersise() {
                     p: 2,
                     display: "flex",
                     flexDirection: "column",
-                    height: 400,
+                    height: 800,
                     textAlign:"center",
                     contentAlign:"center"
                   }}
                 >
-                  <Links to={"/excersises"}>
-                    <h2>Return</h2>
+                  <Links to={"/excersises"} style={{textAlign:"left",color:"#9471F6",marginLeft:"50px",width:"150px",textDecoration:"none"}}>
+                    <h1><ReturnIcon style={{width:"30px",height:"30px"}}/>Return</h1>
                   </Links>
-                  <img src="/pika.png" width={250} height={200}/>
+                  <video width={700} height={400} style={{display:"block",margin:"10px auto 10px"}} controls><source src="./Rick.mp4" type="video/mp4"/></video>
                   <h1>Excersise of Chinese 你好，我也很高兴认识你，你呢?</h1>
+                  <h2>Chinese is very good!!! I love China!!! China is the best country!!! China should rule the world!!! #ChinaForTheWin!!!</h2>
+                  <h2>Do 40 Chinese excersises in Duolingo. 0/40</h2>
                 </Paper>
               </Grid>
             </Grid>

@@ -230,7 +230,7 @@ export default function Excersises() {
           <Container maxWidth={false} sx={{ mt: 4, mb: 4 }}>
             <Grid container spacing={6}>
               <Grid item xs={12} md={8} lg={2}>
-              <Links to={"/excersise"}>
+              <Links to={"/excersise"} style={{ textDecoration: 'none' }}>
                 <Paper
                   sx={{
                     p: 2,
@@ -246,7 +246,7 @@ export default function Excersises() {
               </Links>
               </Grid>
               <Grid item xs={12} md={8} lg={2}>
-              <Links to={"/excersise"}>
+              <Links to={"/excersise"} style={{ textDecoration: 'none' }}>
                 <Paper
                   sx={{
                     p: 2,
@@ -254,7 +254,6 @@ export default function Excersises() {
                     flexDirection: "column",
                     height: 400,
                     textAlign:"center",
-                    textDecoration:"none",
                   }}
                 >
                   <img src="/pika.png" width={250} height={200}/>
@@ -263,7 +262,7 @@ export default function Excersises() {
               </Links>
               </Grid>
               <Grid item xs={12} md={8} lg={2}>
-              <Links to={"/excersise"}>
+              <Links to={"/excersise"} style={{ textDecoration: 'none' }}>
                 <Paper
                   sx={{
                     p: 2,
@@ -271,7 +270,6 @@ export default function Excersises() {
                     flexDirection: "column",
                     height: 400,
                     textAlign:"center",
-                    textDecoration:"none"
                   }}
                 >
                   <img src="/pika.png" width={250} height={200}/>
@@ -280,7 +278,7 @@ export default function Excersises() {
               </Links>
               </Grid>
               <Grid item xs={12} md={8} lg={2}>
-              <Links to={"/excersise"}>
+              <Links to={"/excersise"} style={{ textDecoration: 'none' }}>
                 <Paper
                   sx={{
                     p: 2,
@@ -288,7 +286,6 @@ export default function Excersises() {
                     flexDirection: "column",
                     height: 400,
                     textAlign:"center",
-                    textDecoration:"none"
                   }}
                 >
                   <img src="/pika.png" width={250} height={200}/>
@@ -297,7 +294,7 @@ export default function Excersises() {
               </Links>
               </Grid>
               <Grid item xs={12} md={8} lg={2}>
-              <Links to={"/excersise"}>
+              <Links to={"/excersise"} style={{ textDecoration: 'none' }}>
                 <Paper
                   sx={{
                     p: 2,
@@ -305,7 +302,6 @@ export default function Excersises() {
                     flexDirection: "column",
                     height: 400,
                     textAlign:"center",
-                    textDecoration:"none"
                   }}
                 >
                   <img src="/pika.png" width={250} height={200}/>
@@ -314,7 +310,7 @@ export default function Excersises() {
               </Links>
               </Grid>
               <Grid item xs={12} md={8} lg={2}>
-              <Links to={"/excersise"}>
+              <Links to={"/excersise"} style={{ textDecoration: 'none' }}>
                 <Paper
                   sx={{
                     p: 2,
@@ -322,7 +318,6 @@ export default function Excersises() {
                     flexDirection: "column",
                     height: 400,
                     textAlign:"center",
-                    textDecoration:"none"
                   }}
                 >
                   <img src="/pika.png" width={250} height={200}/>
