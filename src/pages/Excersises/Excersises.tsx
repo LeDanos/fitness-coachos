@@ -21,6 +21,10 @@ import LOGO from "../../assets/LOGO.svg";
 import { ThemeOptions } from "@mui/material/styles";
 import { Avatar } from "@mui/material";
 import { Link as Links} from "react-router-dom"
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import { CardActionArea } from '@mui/material';
+import CardMedia from '@mui/material/CardMedia';
 const drawerWidth = "12rem";
 
 interface AppBarProps extends MuiAppBarProps {
@@ -227,102 +231,120 @@ export default function Excersises() {
           }}
         >
           <Toolbar />
-          <Container maxWidth={false} sx={{ mt: 4, mb: 4 }}>
-            <Grid container spacing={6}>
-              <Grid item xs={12} md={8} lg={2}>
+          <Container maxWidth={false} sx={{ mt: 6, mb: 6 }}>
+            <Grid container spacing={2} columns={12}>
+              <Grid item xs={2} md={2} sm={2}>
               <Links to={"/excersise"} style={{ textDecoration: 'none' }}>
-                <Paper
-                  sx={{
-                    p: 2,
-                    display: "flex",
-                    flexDirection: "column",
-                    height: 400,
-                    textAlign:"center",
-                  }}
-                >
-                  <img src="/pika.png" width={250} height={200}/>
-                  <h1>Excersise of Chinese 你好，我也很高兴认识你，你呢?</h1>
-                </Paper>
+              <Card sx={{ maxWidth: 345 }}>
+              <CardActionArea>
+              <CardMedia
+                component="img"
+                height="140"
+                image="/pika.png"
+                alt="Excersise of Chinese"
+              />
+            <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              Excersise of Chinese 你好，我也很高兴认识你，你呢?
+            </Typography>
+        </CardContent>
+      </CardActionArea>
+    </Card>
               </Links>
               </Grid>
-              <Grid item xs={12} md={8} lg={2}>
+              <Grid item xs={2} md={2} sm={2}>
               <Links to={"/excersise"} style={{ textDecoration: 'none' }}>
-                <Paper
-                  sx={{
-                    p: 2,
-                    display: "flex",
-                    flexDirection: "column",
-                    height: 400,
-                    textAlign:"center",
-                  }}
-                >
-                  <img src="/pika.png" width={250} height={200}/>
-                  <h1>Excersise of the long and painful Saska pegging session</h1>
-                </Paper>
+              <Card sx={{ maxWidth: 345 }}>
+              <CardActionArea>
+              <CardMedia
+                component="img"
+                height="140"
+                image="/pika.png"
+                alt="Excersise of Saska"
+              />
+            <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              Excersise of the long and painful Saska pegging session
+            </Typography>
+        </CardContent>
+      </CardActionArea>
+    </Card>
               </Links>
               </Grid>
-              <Grid item xs={12} md={8} lg={2}>
+              <Grid item xs={2} md={2} sm={2}>
               <Links to={"/excersise"} style={{ textDecoration: 'none' }}>
-                <Paper
-                  sx={{
-                    p: 2,
-                    display: "flex",
-                    flexDirection: "column",
-                    height: 400,
-                    textAlign:"center",
-                  }}
-                >
-                  <img src="/pika.png" width={250} height={200}/>
-                  <h1>Excersise until death!!! 😱😱😱😱</h1>
-                </Paper>
+              <Card sx={{ maxWidth: 345 }}>
+              <CardActionArea>
+              <CardMedia
+                component="img"
+                height="140"
+                image="/pika.png"
+                alt="Excersise of death"
+              />
+            <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              Excersise until death!!! 😱😱😱😱
+            </Typography>
+        </CardContent>
+      </CardActionArea>
+    </Card>
               </Links>
               </Grid>
-              <Grid item xs={12} md={8} lg={2}>
+              <Grid item xs={2} md={2} sm={2}>
               <Links to={"/excersise"} style={{ textDecoration: 'none' }}>
-                <Paper
-                  sx={{
-                    p: 2,
-                    display: "flex",
-                    flexDirection: "column",
-                    height: 400,
-                    textAlign:"center",
-                  }}
-                >
-                  <img src="/pika.png" width={250} height={200}/>
-                  <h1>Excersise 4</h1>
-                </Paper>
+              <Card sx={{ maxWidth: 345 }}>
+              <CardActionArea>
+              <CardMedia
+                component="img"
+                height="140"
+                image="/pika.png"
+                alt="Excersise 4"
+              />
+            <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              Excersise 4
+            </Typography>
+        </CardContent>
+      </CardActionArea>
+    </Card>
               </Links>
               </Grid>
-              <Grid item xs={12} md={8} lg={2}>
+              <Grid item xs={2} md={2} sm={2}>
               <Links to={"/excersise"} style={{ textDecoration: 'none' }}>
-                <Paper
-                  sx={{
-                    p: 2,
-                    display: "flex",
-                    flexDirection: "column",
-                    height: 400,
-                    textAlign:"center",
-                  }}
-                >
-                  <img src="/pika.png" width={250} height={200}/>
-                  <h1>Excersise 5</h1>
-                </Paper>
+              <Card sx={{ maxWidth: 345 }}>
+              <CardActionArea>
+              <CardMedia
+                component="img"
+                height="140"
+                image="/pika.png"
+                alt="Excersise 5"
+              />
+            <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              Excersise 5
+            </Typography>
+        </CardContent>
+      </CardActionArea>
+    </Card>
               </Links>
               </Grid>
-              <Grid item xs={12} md={8} lg={2}>
+              <Grid item xs={2} md={2} sm={2}>
               <Links to={"/excersise"} style={{ textDecoration: 'none' }}>
-                <Paper
-                  sx={{
-                    p: 2,
-                    display: "flex",
-                    flexDirection: "column",
-                    height: 400,
-                    textAlign:"center",
-                  }}
-                >
-                  <img src="/pika.png" width={250} height={200}/>
-                  <h1>Excersise 6</h1>
-                </Paper>
+              <Card sx={{ maxWidth: 345 }}>
+              <CardActionArea>
+              <CardMedia
+                component="img"
+                height="140"
+                image="/pika.png"
+                alt="Excersise 6"
+              />
+            <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              Excersise 6
+            </Typography>
+        </CardContent>
+      </CardActionArea>
+    </Card>
               </Links>
               </Grid>
             </Grid>
@@ -332,4 +354,3 @@ export default function Excersises() {
     </ThemeProvider>
   );
 }
-
