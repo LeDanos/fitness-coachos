@@ -21,8 +21,10 @@ import LOGO from "../../assets/LOGO.svg";
 import { ThemeOptions } from "@mui/material/styles";
 import { Avatar } from "@mui/material";
 import { Link as Links} from "react-router-dom"
-import ReturnIcon from '@mui/icons-material/KeyboardReturn';
-import { Source } from "@mui/icons-material";
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import { CardActionArea } from '@mui/material';
+import CardMedia from '@mui/material/CardMedia';
 const drawerWidth = "12rem";
 
 interface AppBarProps extends MuiAppBarProps {
@@ -143,7 +145,7 @@ export const themeOptions: ThemeOptions = {
 
 const defaultTheme = createTheme(themeOptions);
 
-export default function Excersise() {
+export default function Exersises() {
   const [open, setOpen] = React.useState(false);
   const toggleDrawer = () => {
     setOpen(!open);
@@ -229,27 +231,121 @@ export default function Excersise() {
           }}
         >
           <Toolbar />
-          <Container maxWidth={false} sx={{ mt: 4, mb: 4 }}>
-            <Grid container spacing={1}>
-              <Grid item xs={12} md={8} lg={100}>
-                <Paper
-                  sx={{
-                    p: 2,
-                    display: "flex",
-                    flexDirection: "column",
-                    height: 800,
-                    textAlign:"center",
-                    contentAlign:"center"
-                  }}
-                >
-                  <Links to={"/excersises"} style={{textAlign:"left",color:"#9471F6",marginLeft:"50px",width:"150px",textDecoration:"none"}}>
-                    <h1><ReturnIcon style={{width:"30px",height:"30px"}}/>Return</h1>
-                  </Links>
-                  <video width={700} height={400} style={{display:"block",margin:"10px auto 10px"}} controls><source src="./Rick.mp4" type="video/mp4"/></video>
-                  <h1>Excersise of Chinese 你好，我也很高兴认识你，你呢?</h1>
-                  <h2>Chinese is very good!!! I love China!!! China is the best country!!! China should rule the world!!! #ChinaForTheWin!!!</h2>
-                  <h2>Do 40 Chinese excersises in Duolingo. 0/40</h2>
-                </Paper>
+          <Container maxWidth={false} sx={{ mt: 6, mb: 6 }}>
+            <Grid container spacing={2} columns={12}>
+              <Grid item xs={2} md={2} sm={2}>
+              <Links to={"/exersise"} style={{ textDecoration: 'none' }}>
+              <Card sx={{ maxWidth: 345 }}>
+              <CardActionArea>
+              <CardMedia
+                component="img"
+                height="140"
+                image="/pika.png"
+                alt="exersise of Chinese"
+              />
+            <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+            Exersise of Chinese 你好，我也很高兴认识你，你呢?
+            </Typography>
+        </CardContent>
+      </CardActionArea>
+    </Card>
+              </Links>
+              </Grid>
+              <Grid item xs={2} md={2} sm={2}>
+              <Links to={"/exersise"} style={{ textDecoration: 'none' }}>
+              <Card sx={{ maxWidth: 345 }}>
+              <CardActionArea>
+              <CardMedia
+                component="img"
+                height="140"
+                image="/pika.png"
+                alt="Exersise of Saska"
+              />
+            <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+            Exersise of the long and painful Saska pegging session
+            </Typography>
+        </CardContent>
+      </CardActionArea>
+    </Card>
+              </Links>
+              </Grid>
+              <Grid item xs={2} md={2} sm={2}>
+              <Links to={"/exersise"} style={{ textDecoration: 'none' }}>
+              <Card sx={{ maxWidth: 345 }}>
+              <CardActionArea>
+              <CardMedia
+                component="img"
+                height="140"
+                image="/pika.png"
+                alt="Exersise of death"
+              />
+            <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+            Exersise until death!!! 😱😱😱😱
+            </Typography>
+        </CardContent>
+      </CardActionArea>
+    </Card>
+              </Links>
+              </Grid>
+              <Grid item xs={2} md={2} sm={2}>
+              <Links to={"/exersise"} style={{ textDecoration: 'none' }}>
+              <Card sx={{ maxWidth: 345 }}>
+              <CardActionArea>
+              <CardMedia
+                component="img"
+                height="140"
+                image="/pika.png"
+                alt="Exersise 4"
+              />
+            <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+            Exersise 4
+            </Typography>
+        </CardContent>
+      </CardActionArea>
+    </Card>
+              </Links>
+              </Grid>
+              <Grid item xs={2} md={2} sm={2}>
+              <Links to={"/exersise"} style={{ textDecoration: 'none' }}>
+              <Card sx={{ maxWidth: 345 }}>
+              <CardActionArea>
+              <CardMedia
+                component="img"
+                height="140"
+                image="/pika.png"
+                alt="Exersise 5"
+              />
+            <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+            Exersise 5
+            </Typography>
+        </CardContent>
+      </CardActionArea>
+    </Card>
+              </Links>
+              </Grid>
+              <Grid item xs={2} md={2} sm={2}>
+              <Links to={"/exersise"} style={{ textDecoration: 'none' }}>
+              <Card sx={{ maxWidth: 345 }}>
+              <CardActionArea>
+              <CardMedia
+                component="img"
+                height="140"
+                image="/pika.png"
+                alt="Exersise 6"
+              />
+            <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+            Exersise 6
+            </Typography>
+        </CardContent>
+      </CardActionArea>
+    </Card>
+              </Links>
               </Grid>
             </Grid>
           </Container>
@@ -258,4 +354,3 @@ export default function Excersise() {
     </ThemeProvider>
   );
 }
-

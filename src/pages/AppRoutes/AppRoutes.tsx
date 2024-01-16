@@ -18,8 +18,8 @@ import { Timetable } from "../Timetable/Timetable";
 import { Profile } from "../Profile/Profile";
 import { Policy } from "../Policy/Policy";
 import { AppReview } from "../AppReview/AppReview";
-import Excersises from "../Excersises/Excersises";
-import Excersise from "../Excersises/Excersise";
+import Exersises from "../Exersises/Exersises";
+import Exersise from "../Exersises/Exersise";
 
 export function AppRoutes() {
     return (
@@ -30,7 +30,7 @@ export function AppRoutes() {
                 <Route path="/signin" element={<SignIn />}/>
                 <Route path="/signup" element={<SignUp />}/>
                 <Route path="/notes" element={<Notes />}/>
-                <Route path="/excersises" element={<Excersises />}/>
+                <Route path="/exersises" element={<Exersises />}/>
                 <Route path="/dishes" element={<Dishes />}/>
                 <Route path="/programs" element={<Programs />}/>
                 <Route path="/stats" element={<Stats />}/>
@@ -40,7 +40,7 @@ export function AppRoutes() {
                 <Route path="/friend" element={<Friend />}/>
                 <Route path="/program" element={<Program />}/>
                 <Route path="/dish" element={<Dish />}/>
-                <Route path="/excersise" element={<Excersise />}/>
+                <Route path="/exersise" element={<Exersise />}/>
                 <Route path="/timetable" element={<Timetable />}/>
                 <Route path="/profile" element={<Profile />}/>
                 <Route path="/policy" element={<Policy />}/>
