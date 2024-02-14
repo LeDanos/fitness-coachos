@@ -12,6 +12,7 @@ import Grid from '@mui/material/Grid';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { Link as Linkk } from 'react-router-dom';
 
 function Copyright(props: any) {
   return (
@@ -49,7 +50,7 @@ export default function SignIn() {
           sm={4}
           md={7}
           sx={{
-            backgroundImage: 'url(https://source.unsplash.com/random?wallpapers)',
+            backgroundImage: 'url(/OhLordHaveMercyItsTectoneDeeplyStaringIntoMySoulHESDRAININGMYLIFEAWAYTOGIVEITTOTHEDEMONS.gif)',
             backgroundRepeat: 'no-repeat',
             backgroundColor: (t) =>
               t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
@@ -98,6 +99,7 @@ export default function SignIn() {
                 control={<Checkbox value="remember" color="primary" />}
                 label="Remember me"
               />
+              <Linkk to={"/dashboard"}>
               <Button
                 type="submit"
                 fullWidth
@@ -106,6 +108,7 @@ export default function SignIn() {
               >
                 Sign In
               </Button>
+              </Linkk>
               <Grid container>
                 <Grid item xs>
                   <Link href="#" variant="body2">
@@ -113,9 +116,11 @@ export default function SignIn() {
                   </Link>
                 </Grid>
                 <Grid item>
+                  <Linkk to={"/signup"}>
                   <Link href="#" variant="body2">
                     {"Don't have an account? Sign Up"}
                   </Link>
+                  </Linkk>
                 </Grid>
               </Grid>
               <Copyright sx={{ mt: 5 }} />

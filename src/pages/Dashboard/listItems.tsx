@@ -136,7 +136,7 @@ export const BottomListItems = (props: any): JSX.Element => {
         <ListItemText primary="Settings" />
       </ListItemButton>
       </Link>
-      <Link style={{textDecoration : "none", color : "red"}} to={"/main"}>
+      <Link style={{textDecoration : "none", color : "red"}} to={"/signin"}>
         <ListItemButton>
           <ListItemIcon>
             <img

@@ -12,6 +12,9 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { Link as Linkk } from 'react-router-dom';
+import { signUp } from '../../models/User';
+import { useState } from 'react';
 
 function Copyright(props: any) {
   return (
@@ -30,13 +33,21 @@ function Copyright(props: any) {
 const defaultTheme = createTheme();
 
 export default function SignUp() {
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const [info, setInfo]= useState();
+  const handleSubmit = async(event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
+    const user = await signUp({
+      firstName: data.get('firstName') as string,
+      lastName: data.get('lastName') as string,
+      email: data.get('email') as string,
+      password: data.get('password') as string,
     });
+    if (user.status == 2001){
+      //redirect
+      return;
+    }
+    setInfo(user.msg);
   };
 
   return (
@@ -108,6 +119,7 @@ export default function SignUp() {
                 />
               </Grid>
             </Grid>
+          <Linkk to={"/dashboard"}>
             <Button
               type="submit"
               fullWidth
@@ -116,10 +128,13 @@ export default function SignUp() {
             >
               Sign Up
             </Button>
+          </Linkk>
             <Grid container justifyContent="flex-end">
               <Grid item>
                 <Link href="#" variant="body2">
+                  <Linkk to={"/signin"}>
                   Already have an account? Sign in
+                  </Linkk>
                 </Link>
               </Grid>
             </Grid>
