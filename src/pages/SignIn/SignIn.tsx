@@ -13,6 +13,7 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Link as Linkk } from 'react-router-dom';
+import { User } from 'src/models/User';
 
 function Copyright(props: any) {
   return (
@@ -26,9 +27,11 @@ function Copyright(props: any) {
     </Typography>
   );
 }
-
 // TODO remove, this demo shouldn't need to reset the theme.
 const defaultTheme = createTheme();
+
+export const signIn = async (FormData:User)=>{
+  const res = await fetch("http://localhost:4000/api/v1/user")}
 
 export default function SignIn() {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {

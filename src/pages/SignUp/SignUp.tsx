@@ -12,7 +12,7 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { Link as Linkk } from 'react-router-dom';
+import { Link as Linkk, useNavigate } from 'react-router-dom';
 import { signUp } from '../../models/User';
 import { useState } from 'react';
 
@@ -34,6 +34,8 @@ const defaultTheme = createTheme();
 
 export default function SignUp() {
   const [info, setInfo]= useState();
+  const navigate = useNavigate();
+
   const handleSubmit = async(event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -43,11 +45,9 @@ export default function SignUp() {
       email: data.get('email') as string,
       password: data.get('password') as string,
     });
-    if (user.status == 2001){
-      //redirect
-      return;
-    }
-    setInfo(user.msg);
+    if (user.status == 201) return navigate("/signin");
+    if (user.status == 400) return setInfo(user.msg);
+    if (user.status == 500) return navigate("/error");
   };
 
   return (
@@ -119,7 +119,6 @@ export default function SignUp() {
                 />
               </Grid>
             </Grid>
-          <Linkk to={"/dashboard"}>
             <Button
               type="submit"
               fullWidth
@@ -128,7 +127,6 @@ export default function SignUp() {
             >
               Sign Up
             </Button>
-          </Linkk>
             <Grid container justifyContent="flex-end">
               <Grid item>
                 <Link href="#" variant="body2">
@@ -138,6 +136,7 @@ export default function SignUp() {
                 </Link>
               </Grid>
             </Grid>
+            <p>{info}</p>
           </Box>
         </Box>
         <Copyright sx={{ mt: 5 }} />
